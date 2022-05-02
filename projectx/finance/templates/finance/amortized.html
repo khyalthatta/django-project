@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+    <h2>Amortized Loan</h2>
+
+    <form class="form-group" action="" method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" name="submit" value="Calculate">
+
+    </form>
+    {% if activated %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Year</th>
+                <th scope="col">Payment</th>
+                <th scope="col">Interest</th>
+                <th scope="col">Principle</th>
+                <th scope="col">Loan Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for res in output%}
+            <tr>
+                {{res|safe}}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% endif %}
+</div>
+{% endblock %}

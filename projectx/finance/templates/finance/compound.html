@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+    <h2>Compound Interest</h2>
+    <form class="form-group" action="" method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" name="" value="Calculate">
+    </form>
+    <input class="my-2" type="text" placeholder="Compound Output" value="{{result}}">
+</div>
+{% endblock %}

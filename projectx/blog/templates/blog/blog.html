@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h4>Blog List</h4>
+{% if blog %}
+{% for b in blog%}
+<ul>
+    <li>{{b.title}}</li>
+    <li>{{b.content}}</li>
+    <li>{{b.footer}}</li>
+</ul>
+{% endfor %}
+{% else %}
+<h3>There is no blogs please <a href=""> create one </a> </h3>
+{% endif %}
+{% endblock %}

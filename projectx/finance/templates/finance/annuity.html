@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container w-50 p-3">
+
+    <h1>Annuity Calculation</h1>
+    <form class="form-group" action="" method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" name="" value="Calculate">
+    </form>
+    <div class="mt-5">
+        <input type="text" value="{{result}}" placeholder="Annuity Output">
+    </div>
+
+</div>
+
+
+
+{% endblock %}

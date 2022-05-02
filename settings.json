@@ -1,0 +1,30 @@
+{
+    //    Customize VsCode JSON setting
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "Operator Mono Book",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 20,
+    "breadcrumbs.enabled": false,
+    "editor.rulers": [
+        {
+            "column": 82,
+            "color": "#BB6350"
+        }
+    ],
+    "editor.autoClosingBrackets": "always",
+    "editor.formatOnSave": true,
+    "window.menuBarVisibility": "toggle",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "terminal.integrated.fontFamily": "MesloLGSDZ NF",
+    "timeline.excludeSources": [
+        "timeline.localHistory"
+    ],
+    "workbench.colorCustomizations": {
+        "terminal.background": "#000000"
+    },
+    "terminal.integrated.tabs.enabled": false
+}
